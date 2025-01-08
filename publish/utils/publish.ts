@@ -1,10 +1,11 @@
 import { Transaction } from "@mysten/sui/transactions";
 import { SuiClient } from "@mysten/sui/client";
 import { execSync } from "child_process";
-import path from "path";
 
-import { Ed25519Keypair } from "@mysten/sui/dist/cjs/keypairs/ed25519";
+import { Ed25519Keypair } from "@mysten/sui/keypairs/ed25519";
 import ObjectDict from './objectDict';
+
+const packageName = "suilend_test";
 
 async function publish(
   client: SuiClient,
@@ -65,15 +66,15 @@ async function publish(
       const packageModuleName = parts[parts.length - 2];
       const packageId = parts[0];
 
-      // Add entry 
+      // Add entry
       objectDict.addEntry(
         process.env.NETWORK as string, // network
-        packageName,     // package name 
+        packageName,     // package name
         packageId,       // package ID
         objectName,      // type name
         obj.objectId     // object ID
       );
-      
+
       console.log(`Saved ${objectName} to ObjectDict:`, obj);
     });
   }

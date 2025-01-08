@@ -1,8 +1,8 @@
 import { SuiClient } from "@mysten/sui/client";
-import { Ed25519Keypair } from "@mysten/sui/dist/cjs/keypairs/ed25519";
+import { Ed25519Keypair } from "@mysten/sui/keypairs/ed25519";
 
 async function checkSuiBalance(
-  client: SuiClient, 
+  client: SuiClient,
   keypair: Ed25519Keypair
 ) {
   // Get the address of the keypair
@@ -17,7 +17,7 @@ async function checkSuiBalance(
 
     // Calculate total balance
     const totalBalance = coins.data.reduce(
-      (sum, coin) => sum + BigInt(coin.balance), 
+      (sum, coin) => sum + BigInt(coin.balance),
       BigInt(0)
     );
 
