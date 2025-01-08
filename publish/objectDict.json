@@ -1,3 +1,15 @@
 {
-  "network": {}
+  "network": {
+    "mainnet": {
+      "package": {
+        "suilend_test": {
+          "0x2": {
+            "typeName": {
+              "UpgradeCap": "0xa5a337a56cb1c73dfa293a6422861e62fef8adc606c49b6852d1c3be41916266"
+            }
+          }
+        }
+      }
+    }
+  }
 }
