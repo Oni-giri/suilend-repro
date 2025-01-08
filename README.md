@@ -17,4 +17,12 @@ then: `npx tsx publish/publish_suilend_test.ts`
 
 It should revert.
 
-If you remove the suilend import in the .move file, it should work. 
+If you remove the suilend import in the .move file, it should work.
+
+## juzy's notes
+
+this worked for me after my code tweaks
+```
+pnpm install
+pnpm tsx publish/publish_suilend_test.ts
+```
